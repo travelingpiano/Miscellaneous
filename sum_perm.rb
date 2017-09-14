@@ -1,10 +1,6 @@
 #assuming array only contains positive numbers
 def sum_perm(arr,target)
-  # if arr.length == 1
-  #   return arr[0]%target == 0 ? [[arr[0]]*target/arr[0]] : []
-  # end
-  # prev_result = sum_perm(arr[0...-1],target)
-  new_result = []
+  result = []
   test_queue = arr.map{|el| el = [el]}
   until test_queue.empty?
     test_case = test_queue.shift
@@ -16,7 +12,7 @@ def sum_perm(arr,target)
       end
     end
   end
-  return new_result
+  return result
 end
 
 p(sum_perm([2,3],10))
